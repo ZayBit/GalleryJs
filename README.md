@@ -1,4 +1,5 @@
 # GalleryJs
+!["demo-gif"](demo.gif)
 > HTML
 ~~~html
 <head>
