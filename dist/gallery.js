@@ -179,3 +179,6 @@ class gallery {
         });
     }
 }
+new gallery('.gallery',{
+    selector:'img'
+})
