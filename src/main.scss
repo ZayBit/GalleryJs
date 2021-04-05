@@ -1,0 +1,92 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow: visible;
+    &.hidden-scroll{
+        overflow: hidden; 
+    }
+}
+.container{
+    margin:auto;
+    width:500px;
+    h1{
+        margin:25px 0px;
+        text-align: center;
+    }
+    img{
+        width:230px;
+        height:200px;
+        object-fit: cover;
+        transition: all 300ms ease;
+        cursor: pointer;
+        display: inline-block;
+    }
+}
+.lightbox{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100vh;
+    opacity: 0;
+    visibility: hidden;
+    img{
+        object-fit: cover;
+        transition: all 200ms ease;
+    }
+    .bg-lightbox{
+        position: absolute;
+        bottom:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        background-color: rgba(0, 0, 0, 0.685);
+    }
+    .controls{
+        button,span{
+            font-family: sans-serif;
+            cursor: pointer;
+            border:none;
+            background: #fff;
+            padding:10px;
+            outline: none;
+            position: absolute;
+            top:0px;
+            z-index: 999;
+            margin: auto;
+            &.current-count{
+                top:10px;
+                left:10px;
+                font-size: 14px;
+                border-radius:5px;
+            }
+            &.left-arrow,&.right-arrow{
+                bottom:0px;
+                border-top-right-radius:5px;
+                border-bottom-right-radius:5px;
+                height:50px;
+            }
+            &.right-arrow{
+                right:0px;
+                border: none;
+                border-top-left-radius:5px;
+                border-bottom-left-radius:5px;
+            }
+            &.btn-close{
+                top:10px;
+                right:10px;
+                border-radius:5px;
+                font-size:15px;
+            }
+        }
+    }
+&.lightbox-visible{
+    opacity: 1;
+    visibility: visible;
+}
+}

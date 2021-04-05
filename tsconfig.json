@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": false,
+        "outFile": "./dist/gallery.js",
+        "target": "ES2020"
+      },
+      "include": ["./src/index.ts"],
+      "exclude": ["node_modules","**/*.spec.ts"]
+}
